@@ -1,0 +1,42 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> nexo-inventario@2.1.0 test
+> node --test --test-concurrency=1
+
+Kardex PostgreSQL: [["20.0000","12.300000","246.0000"],["40.0000","12.400000","496.0000"],["30.0000","12.400000","372.0000"]]
+✔ 01 · Tai Loy · Kardex de tres movimientos y utilidad (715.893297ms)
+Almacenes 30 y 10; salida rechazada; consolidado de los tres almacenes 70.
+✔ 02 · Panita · Separación de almacenes y rechazo sin mutaciones (35.088447ms)
+17 bolsas; valor S/ 525.3000; sin ventas.
+✔ 03 · Promart · Consumo sin generar ventas (19.941307ms)
+187.5000 metros; S/ 571.6875; costo por metro S/ 3.049000.
+✔ 04 · Sodimac · Conversión de rollos y salida de metros fraccionarios (14.684754ms)
+Faltante de 2 bolsas; ajuste -S/ 41.8000; valor final S/ 585.2000.
+✔ 05 · Metro · Faltante aplicado al inventario y registrado en Kardex (20.114407ms)
+12 latas vendidas; ingreso S/ 54.0000; costo S/ 49.2000; utilidad S/ 4.8000.
+✔ 06 · Tottus · Venta por packs sin duplicar ingresos al convertir (20.562412ms)
+Sobrante de 1 pack; 11 packs por S/ 812.9000; repetición sin ajuste.
+✔ 07 · Hiraoka · Sobrante y segundo conteo sin diferencia (26.603416ms)
+Stock y valor cero; utilidad S/ 32.0000.
+✔ 08 · Coolbox · Venta que agota stock, valor y promedio (19.333332ms)
+Altas, edición y conversión guardadas; credenciales inválidas no permiten el acceso.
+✔ 09 · Mantenimiento de catálogos y sesión protegida (70.819943ms)
+Se aceptó una sola venta. La segunda fue rechazada con HTTP 409.
+✔ 10 · Dos ventas concurrentes sobre una sola unidad disponible (30.133328ms)
+Rechazados: códigos inválidos, exceso de decimales, compra a cero, nota muy larga, líneas repetidas e inactivos.
+✔ 11 · Validaciones de formatos, límites y catálogos activos (21.489126ms)
+Archivos PDF y XLSX auténticos con filtros idénticos. Excel: ingreso 54.00, costo 49.20 y utilidad 4.80.
+✔ 12 · PDF y Excel mantienen los filtros y los importes del reporte (150.408328ms)
+Contraseña actualizada, sesiones anteriores inválidas e ingreso con la nueva contraseña confirmado.
+✔ 13 · Cambio de contraseña con validación, revocación y nuevo ingreso (213.408594ms)
+Rechazo de campos incoherentes, duplicados y conversiones inválidas; formatos reales con tildes y símbolos de medida aceptados.
+✔ 14 · Reglas de mantenimiento y mensajes por campo (31.518854ms)
+✔ 15 · Cierre de sesión revoca el acceso (3.789494ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1655.230816
